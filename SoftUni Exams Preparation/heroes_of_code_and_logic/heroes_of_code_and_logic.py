@@ -113,15 +113,10 @@ while commands[0] != "End":
 
 
     commands = input().split(" - ")
+
 for key, value in heroes_dict.items():
     print(key)
     print(f"HP: {heroes_dict[key][0]}")
     print(f"MP: {heroes_dict[key][1]}")
-        print(f"{hero_name} healed for {amount_recovered} HP!")
 
 
-    commands = input().split(" - ")
-for key, value in heroes_dict.items():
-    print(key)
-    print(f"HP: {heroes_dict[key][0]}")
-    print(f"MP: {heroes_dict[key][1]}")
