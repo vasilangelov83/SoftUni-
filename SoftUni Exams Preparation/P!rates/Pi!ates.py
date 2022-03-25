@@ -29,8 +29,8 @@ while True:
             cities_dict.pop(town)
             print(f"{town} has been wiped off the map!")
     if action == "Prosper":
-        town = action[1]
-        gold = int(action[2])
+        town = events[1]
+        gold = int(events[2])
         if gold < 0:
             print("Gold added cannot be a negative number!")
         else:
@@ -38,7 +38,7 @@ while True:
             print(f"{gold} gold added to the city treasury. {town} now has {cities_dict[town][1]} gold.")
 
 print(f"Ahoy, Captain! There are {len(cities_dict.keys())} wealthy settlements to go to:")
-if len(cities_dict.keys()) >0:
+if len(cities_dict.keys()) > 0:
 
     for key in cities_dict:
 
