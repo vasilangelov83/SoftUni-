@@ -3,6 +3,7 @@ initial_list = list(map(int,input().split(" ")))
 command = input().split(" ")
 result_list = []
 max_number_even = 0
+max_number_odd = 0
 min_number = sys.maxsize
 while True:
     if command[0] == "end":
@@ -20,11 +21,13 @@ while True:
                     if result_list[i] > max_number_even:
                         max_number_even = result_list[i]
             result_list.index(max_number_even)
-
-
-                    if result_list[i] > max_number:
+            if result_list[i] > max_number_odd:
                         max_number = result_list[i]
-            result_list.index(max_number)
+            result_list.index(max_number_odd)
+
+
+
+
 
 
 
