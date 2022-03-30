@@ -1,28 +1,23 @@
 
+
 data = input().split(" ")
 num = int(input())
-data = list(map(int,data))
+data = list(map(int, data))
 people = data
-permutation = []
+permutation_list = []
 counter = 0
-counter_2 = 0
-
-
-
+offset = 0
 while people:
-
-    for i in range(len(data)):
+    for i in range(len(people)):
         counter += 1
+
         if counter == num:
-            permutation.append(people[i])
+            permutation_list.append(people[i-offset])
+            people.pop(i-offset)
+            offset += 1
             counter = 0
-
-
-    for j in permutation:
-
-        if j in people:
-            people.remove(j)
-permutation = list(map(str, permutation))
-print(f"[{','.join(permutation)}]")
+    offset = 0
+permutation_list = list(map(str, permutation_list))
+print(f"[{','.join(permutation_list)}]")
 
 
