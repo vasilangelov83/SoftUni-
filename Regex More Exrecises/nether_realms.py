@@ -16,7 +16,7 @@ for name in sorted(text):
 
         if match.group(2) is not None and match.group(2) != "":
             daemon_damage += float(match.group(2))
-        if match.group(3) != "":
+        if match.group(3) is not None and match.group(3) != "":
             arithmetic_ops.append(match.group(3))
     for ch in arithmetic_ops:
         if ch == "*":
