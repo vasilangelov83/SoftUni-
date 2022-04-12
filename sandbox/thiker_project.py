@@ -153,7 +153,7 @@ if __name__ == "__main__":
     canvas = tk.Canvas(root, width=1536, height=864)
     canvas.pack()
     x_mouse = random.randrange(18, 1469)
-    y_mouse = random.randrange(7, 808, 50)
+    y_mouse = random.randrange(7, 808, 20)
     mouse = canvas.create_rectangle(x_mouse, y_mouse, x_mouse + 50, y_mouse + 50)
     x_snake = random.randrange(18, 1369, 50)
     y_snake = random.randrange(7, 808, 50)
