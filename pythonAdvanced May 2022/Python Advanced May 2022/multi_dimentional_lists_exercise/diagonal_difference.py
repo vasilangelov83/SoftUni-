@@ -13,6 +13,6 @@ for i in range(n):
         if i == j:
             primary_diagonal_sum += matrix[i][j]
 
-        if i == n - j -1:
+        if i == n - j - 1:
             secondary_diagonal_sum += matrix[i][j]
 print(abs(primary_diagonal_sum - secondary_diagonal_sum))
