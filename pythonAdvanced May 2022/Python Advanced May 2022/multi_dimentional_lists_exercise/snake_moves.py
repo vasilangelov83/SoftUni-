@@ -6,12 +6,8 @@ word = input()
 index = 0
 for row in range(rows):
     line = [None] * cols
-    if row % 2 == 0:
-        for col in range(cols):
-            line[col] = word[index % len(word)]
-            index += 1
-    else:
-        for col in range(cols -1, -1,-1):
-            line[col] = word[index % len(word)]
-            index += 1
+    start, end, step = (0, cols, 1) if row % 2 == 0 else (cols -1, -1, -1)
+    for col in range(0, cols, 1):
+        line[col] = word[index % len(word)]
+        index += 1
     print(''.join(line))
